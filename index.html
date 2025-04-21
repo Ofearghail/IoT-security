@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Your Smart Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="pagelogic.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Secure Your Smart Home</h1>
+    <p class="description">Learn how to protect your smart devices.</p>
+  </header>
+
+
+
+  <div class="carousel-container">
+    <h2>IoT Horror Stories</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <div class="card" id="article">
+          <h3>NYTimes: Hackers Breach Ring Home Security Cameras</h3>
+          <p>Unnerved owners of the devices reported recent hacks in four states. The company reminded customers not to recycle passwords and user names.</p>
+          <a href="https://www.nytimes.com/2019/12/15/us/Hacked-ring-home-security-cameras.html" target="_blank">Read more →</a>
+        </div>
+        <div class="card" id="article">
+          <h3>DAIC: FDA Confirms Heart Monitor Vulnerabilities</h3>
+          <p>FDA Confirms Cybersecurity Vulnerabilities of St. Jude’s Implantable Cardiac Devices, Merlin Transmitter.</p>
+          <a href="https://www.dicardiology.com/article/fda-confirms-cybersecurity-vulnerabilities-st-judes-implantable-cardiac-devices-merlin" target="_blank">Read more →</a>
+        </div>
+        <div class="card" id="article">
+          <h3>Wired: Flaw in Home Security Cameras Exposes Live Feeds to Hackers</h3>
+          <p>Trendnet home security cameras hacked exposing live feeds of thousands of customers homes.</p>
+          <a href="https://www.wired.com/2012/02/home-cameras-exposed/" target="_blank">Read more →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Why are IoT devices a Big Risk Factor?</h2>
+    <div class="video-frame"><iframe width="560" height="315" src="https://www.youtube.com/embed/SvFyd8DpRkw?si=28l1t3eovHAGJZTX" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="video-credit">
+        <p>Video by <a href="https://www.youtube.com/@techquickie" target="_blank">Techquickie</a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Things to Consider When Securing IoT Devices</h2>
+    <p>IoT devices are often designed with convenience in mind, but this can lead to security vulnerabilities. Here is a video from IBM explaining the things to consider when securing your devices:</p>
+    <div class="video-frame"><iframe width="560" height="315" src="https://www.youtube.com/embed/7zWVxrjjIpE?si=IPTIBh80Zz4saqvB" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="video-credit">
+        <p>Video by <a href="https://www.youtube.com/@IBMTechnology" target="_blank">IBM Technology</a></p>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>IoT Security Checklist</h2>
+    <button onclick="toggleAll()" style="margin-bottom: 10px;">Expand All</button>
+    <ul id="checklist">
+      <li>
+        <button class="collapse-btn" onclick="toggleCollapse('item1', this)">
+          <span class="arrow">▶</span> Change all default passwords
+        </button>
+        <div class="collapse-content" id="item1">
+          <p>Default usernames and passwords are publicly known and can be easily exploited by attackers. Change them immediately when setting up a new device.</p>
+        </div>
+      </li>
+      <li>
+        <button class="collapse-btn" onclick="toggleCollapse('item2', this)">
+          <span class="arrow">▶</span> Enable two-factor authentication
+        </button>
+        <div class="collapse-content" id="item2">
+          <p>2FA adds a second layer of security, ensuring that even if someone knows your password, they can’t access your devices without a second code.</p>
+        </div>
+      </li>
+      <li>
+        <button class="collapse-btn" onclick="toggleCollapse('item3', this)">
+          <span class="arrow">▶</span> Segment your network for IoT devices
+        </button>
+        <div class="collapse-content" id="item3">
+          <p>Place IoT devices on a separate network from personal devices to limit the damage if one device is compromised.</p>
+        </div>
+      </li>
+      <li>
+        <button class="collapse-btn" onclick="toggleCollapse('item4', this)">
+          <span class="arrow">▶</span> Update firmware regularly
+        </button>
+        <div class="collapse-content" id="item4">
+          <p>Manufacturers release firmware updates to patch security holes. Check your devices often and apply updates when available.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card" id="quiz-section">
+    <h2>IoT Security Self-Check</h2>
+    <form id="quiz-form">
+      <p><strong>1. What’s the first thing you should do when setting up a new IoT device?</strong></p>
+      <label><input type="radio" name="q1" value="a"> Plug it in and go</label><br>
+      <label><input type="radio" name="q1" value="b"> Change default credentials</label><br><br>
+  
+      <p><strong>2. Why should you segment your home network?</strong></p>
+      <label><input type="radio" name="q2" value="a"> To make Wi-Fi faster</label><br>
+      <label><input type="radio" name="q2" value="b"> To isolate insecure devices</label><br><br>
+  
+      <p><strong>3. Which of these helps keep your devices secure long term?</strong></p>
+      <label><input type="radio" name="q3" value="a"> Ignoring updates</label><br>
+      <label><input type="radio" name="q3" value="b"> Updating firmware regularly</label><br><br>
+  
+      <button type="button" onclick="gradeQuiz()">Submit Answers</button>
+    </form>
+  
+    <div id="quiz-result" style="display: none;">
+      <p>Your IoT Security Score:</p>
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p id="feedback" style="font-size: 0.875rem; margin-top: 8px;"></p>
+    </div>
+  </div>
+  
+  <div class="card" id="resources-section">
+    <h2>Additional Resources</h2>
+    <div class="image-row">
+        <a class="image-column" href="https://www.cisa.gov/news-events/news/securing-internet-things-iot" target="_blank">
+          <img src="./img/cisa.png" alt="Smart Camera" />
+          <span>Securing the Internet of Things</span>
+        </a>
+        <div class="image-column">
+          <img src="./img/eff.png" alt="Smart Speaker" />
+          <a href="https://www.eff.org/deeplinks/2022/03/podcast-episode-securing-internet-things" target="_blank">Podcast Episode: Securing the Internet of Things</a>
+        </div>
+      </div>
+      
+  </div>
+  
+</body>
+</html>

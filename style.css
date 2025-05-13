@@ -225,3 +225,32 @@ body {
   .video-credit {
     margin: auto;
   }
+
+  #infographic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.device {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.device:hover {
+  background-color: #2980b9;
+}
+.arrow {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+#attack-message {
+  margin-top: 15px;
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+}

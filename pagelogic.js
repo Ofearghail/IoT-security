@@ -77,3 +77,21 @@ function gradeQuiz() {
     expandAll.textContent = isAnyClosed ? "Collapse All" : "Expand All";
   }
   
+
+  function triggerAttack() {
+  const attackMessage = document.getElementById("attack-message");
+  attackMessage.innerHTML = "The hacker exploits the vulnerable IoT device, gaining control! The attack spreads through the router to other devices!";
+  attackMessage.style.display = "block";
+
+  const devices = ["iot-device", "router", "pc", "smart-tv"];
+  const arrows = ["arrow1", "arrow2", "arrow3"];
+
+  devices.forEach((device, index) => {
+    setTimeout(() => {
+      document.getElementById(device).style.backgroundColor = "#e74c3c";
+      if (arrows[index]) {
+        document.getElementById(arrows[index]).style.color = "#e74c3c";
+      }
+    }, index * 600);
+  });
+}

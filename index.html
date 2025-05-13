@@ -40,12 +40,35 @@
 
   <div class="card">
     <h2>Why are IoT devices a Big Risk Factor?</h2>
+    <p>IoT devices, like smart thermostats, cameras, and home assisntants, are becomming more common, but they often lack strong security. Many Manufacturers focus on making 
+      these devices easy to use rather than secure, leaving them vulnerable to hackers. Weak passwords, outdated software, and limited encryption can make it easy for attackers to gain control. 
+      Once compromised, these devices can give hackers access to your entire home network, putting your personal data at risk. In some cases, cybercriminals can even use hijacked devices 
+      to carry out large-scale attacks on other systems. As IoT devices become more popular, it’s essential to take steps to secure them and protect your network.</p>
+    <p>Here is a short video from Techquickie explaining the risks of IoT devices:</p>
     <div class="video-frame"><iframe width="560" height="315" src="https://www.youtube.com/embed/SvFyd8DpRkw?si=28l1t3eovHAGJZTX" title="YouTube video player" frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
     <div class="video-credit">
         <p>Video by <a href="https://www.youtube.com/@techquickie" target="_blank">Techquickie</a></p>
+        
     </div>
+    <p>Techquickie is a Youtube channel owned by Linus Media Group which is a technology journalist company working to entertain and educate.</p>
   </div>
+
+<div class="card" id="infographic-section">
+  <h2>How an Unsecured IoT Device Can Be Exploited</h2>
+  <p>Click on the IoT device to see how an attack can spread through the network.</p>
+  <div id="infographic">
+    <div class="device" id="iot-device" onclick="triggerAttack()">📶 IoT Device</div>
+    <div class="arrow" id="arrow1">➡</div>
+    <div class="device" id="router">🌐 Router</div>
+    <div class="arrow" id="arrow2">➡</div>
+    <div class="device" id="pc">💻 PC</div>
+    <div class="arrow" id="arrow3">➡</div>
+    <div class="device" id="smart-tv">📺 Smart TV</div>
+    <div id="attack-message" style="display: none;"></div>
+  </div>
+</div>
+
 
   <div class="card">
     <h2>Things to Consider When Securing IoT Devices</h2>
@@ -55,8 +78,6 @@
     <div class="video-credit">
         <p>Video by <a href="https://www.youtube.com/@IBMTechnology" target="_blank">IBM Technology</a></p>
     </div>
-  </div>
-
 
   <div class="card">
     <h2>IoT Security Checklist</h2>
